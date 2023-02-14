@@ -90,3 +90,4 @@ The last element becomes the first one.<br>
 
 To illustrate the effect of some of these instructions, let’s sort a random list of integers. In this example, we’ll consider that both stacks grow from the right.
 
+<img width="607" alt="Example_push_swap" src="https://user-images.githubusercontent.com/120580537/218683838-b4492585-9cb4-485c-b952-9fa8d9e67a24.png">
