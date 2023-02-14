@@ -91,3 +91,112 @@ The last element becomes the first one.<br>
 To illustrate the effect of some of these instructions, let’s sort a random list of integers. In this example, we’ll consider that both stacks grow from the right.
 
 <img width="607" alt="Example_push_swap" src="https://user-images.githubusercontent.com/120580537/218683838-b4492585-9cb4-485c-b952-9fa8d9e67a24.png">
+
+Integers from **a** get sorted in 12 instructions. Can you do better? :smirk:
+
+## IV.3 The "push_swap" program
+| | |
+| ----- | ----- |
+| **Program name** | push_swap |
+| **Turn in files** | Makefile, *.h, *.c |
+| **Makefile** | NAME, all, clean, fclean, re |
+| **Arguments** | stack a: A list of integers |
+| **External functs.** | * read, write, malloc, free, exit<br> * ft_print and any equivelent YOU coded |
+
+Your project must comply with the following rules:
+* You have to turn in a **Makefile** which will compile your source files. It must not relink.
+* Global variables are forbidden.
+* You have to write a program named **push_swap** that takes as an argument the stack a formatted as a list of integers. The first argument should be at the top of the stack (be careful about the order).
+* The program must display the smallest list of instructions possible to sort the stack a, the smallest number being at the top.
+* Instructions must be separated by a ’\n’ and nothing else.
+* The goal is to sort the stack with the lowest possible number of operations. During the evaluation process, the number of instructions found by your program will be compared against a limit: the maximum number of operations tolerated. If your program either displays a longer list or if the numbers aren’t sorted properly, your grade will be 0.
+* If no parameters are specified, the program must not display anything and give the prompt back.
+* In case of error, it must display "Error" followed by a ’\n’ on the standard error. Errors include for example: some arguments aren’t integers, some arguments are bigger than an integer and/or there are duplicates.
+
+````
+$>./push_swap 2 1 3 6 5 8
+sa
+pb
+pb
+pb
+sa
+pa
+pa
+pa
+$>./push_swap 0 one 2 3
+Error
+$>
+````
+
+During the evaluation process, a binary will be provided in order to properly check your program.
+
+* It will work as follows:
+
+````
+$>ARG="4 67 3 87 23"; ./push_swap $ARG | wc -l
+6
+$>ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker_OS $ARG
+OK 
+$>
+````
+
+If the program **checker_OS** displays **"KO"**, it means that your **push_swap** came up with a list of instructions that doesn’t sort the numbers.
+
+## :information_source: The checker_OS program is available in the resources of the project in the intranet. You can find a description of how it works in the Bonus Part of this document. :information_source:
+
+<p align="right">
+ <a href="https://github.com/Cerberus2290/push_swap/blob/main/README.md#-beware-">back to top</a>
+</p>
+
+# <a name="bonus">Bonus part</a>
+
+| Bonus part | ![Logo_Monolith_small](https://user-images.githubusercontent.com/120580537/209333599-dc44418d-8ee7-42b6-8a4a-7ff328778d87.png) |
+| ----- | ----- |
+
+This project leaves little room for adding extra features due to its simplicity.<br> However, how about creating your own checker?
+
+## V.1 The "checker" program
+
+| | |
+| ----- | ----- |
+| **Program name** | checker |
+| **Turn in files** | *.h, *.c |
+| **Makefile** | bonus |
+| **Arguments** | stack a: A list of integers |
+| **External functs.** | * read, write, malloc, free<br> * ft_printf and any equivalent YOU coded |
+| **Libft authorized** | Yes |
+| **Description** | Execute the sorting instructions |
+
+* Write a program named checker that takes as an argument the stack a formatted as a list of integers. The first argument should be at the top of the stack (be careful about the order). If no argument is given, it stops and displays nothing.
+* It will then wait and read instructions on the standard input, each instruction will be followed by ’\n’. Once all the instructions have been read, the program has to execute them on the stack received as an argument.
+* If after executing those instructions, the stack a is actually sorted and the stack b is empty, then the program must display "OK" followed by a ’\n’ on the standard output.
+* In every other case, it must display "KO" followed by a ’\n’ on the standard output.
+* In case of error, you must display "Error" followed by a ’\n’ on the standard er- ror. Errors include for example: some arguments are not integers, some arguments are bigger than an integer, there are duplicates, an instruction doesn’t exist and/or is incorrectly formatted.
+
+````
+$>./checker 3 2 1 0
+rra
+pb
+sa
+rra
+pa
+OK
+$>./checker 3 2 1 0
+sa
+rra
+pb
+KO
+$>./checker 3 2 one 0
+Error
+$>./checker "" 1
+Error
+$>
+````
+
+## :heavy_exclamation_mark: You DO NOT have to reproduce the exact same behavior as the provided binary. It is mandatory to manage errors but it is up to you to decide how you want to parse the arguments. :heavy_exclamation_mark:
+
+## :heavy_exclamation_mark: The bonus part will only be assessed if the mandatory part is PERFECT. Perfect means the mandatory part has been integrally done and works without malfunctioning. If you have not passed ALL the mandatory requirements, your bonus part will not be evaluated at all. :heavy_exclamation_mark:
+
+<p align="right">
+ <a href="https://github.com/Cerberus2290/push_swap/blob/main/README.md#-beware-">back to top</a>
+</p>
