@@ -142,7 +142,7 @@ $>
 
 If the program **checker_OS** displays **"KO"**, it means that your **push_swap** came up with a list of instructions that doesn’t sort the numbers.
 
-## :information_source: The checker_OS program is available in the resources of the project in the intranet. You can find a description of how it works in the Bonus Part of this document.<br> :information_source:
+## :information_source:<br> The checker_OS program is available in the resources of the project in the intranet. You can find a description of how it works in the Bonus Part of this document.<br> :information_source:
 
 <p align="right">
  <a href="https://github.com/Cerberus2290/push_swap/blob/main/README.md#-beware-">back to top</a>
@@ -193,9 +193,9 @@ Error
 $>
 ````
 
-## :heavy_exclamation_mark: You DO NOT have to reproduce the exact same behavior as the provided binary. It is mandatory to manage errors but it is up to you to decide how you want to parse the arguments.<br> :heavy_exclamation_mark:
+## :heavy_exclamation_mark:<br> You DO NOT have to reproduce the exact same behavior as the provided binary. It is mandatory to manage errors but it is up to you to decide how you want to parse the arguments.<br> :heavy_exclamation_mark:
 
-## :heavy_exclamation_mark: The bonus part will only be assessed if the mandatory part is PERFECT. Perfect means the mandatory part has been integrally done and works without malfunctioning. If you have not passed ALL the mandatory requirements, your bonus part will not be evaluated at all.<br> :heavy_exclamation_mark:
+## :heavy_exclamation_mark:<br> The bonus part will only be assessed if the mandatory part is PERFECT. Perfect means the mandatory part has been integrally done and works without malfunctioning. If you have not passed ALL the mandatory requirements, your bonus part will not be evaluated at all.<br> :heavy_exclamation_mark:
 
 <p align="right">
  <a href="https://github.com/Cerberus2290/push_swap/blob/main/README.md#-beware-">back to top</a>
